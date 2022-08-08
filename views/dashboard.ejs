@@ -106,7 +106,9 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">EARNED TOTAL</div>
-                                    <div class="number">$<%=comma(req.user.total_earned)%>
+                                    <div class="number">
+                                        <%= req.user.currency %>
+                                            <%=comma(req.user.total_earned)%>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +122,9 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">PENDING</div>
-                                    <div class="number">$<%=comma(req.user.pending)%>
+                                    <div class="number">
+                                        <%= req.user.currency %>
+                                            <%=comma(req.user.pending)%>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +138,9 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">TOTAL DEPOSITS</div>
-                                    <div class="number">$<%=comma(req.user.total_deposit)%>
+                                    <div class="number">
+                                        <%= req.user.currency %>
+                                            <%=comma(req.user.total_deposit)%>
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +154,9 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">ACTIVE DEPOSIT</div>
-                                    <div class="number">$<%=comma(req.user.active_deposit)%>
+                                    <div class="number">
+                                        <%= req.user.currency %>
+                                            <%=comma(req.user.active_deposit)%>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +170,9 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">TOTAL WITHDRAW</div>
-                                    <div class="number">$<%=comma(req.user.total_withdraw)%>
+                                    <div class="number">
+                                        <%= req.user.currency %>
+                                            <%=comma(req.user.total_withdraw)%>
                                     </div>
                                 </div>
                             </div>
@@ -242,16 +252,22 @@
                                     <div class="hide-sm">
                                         <div style="border-bottom: 1px solid #26323B; padding: 10px 20px">Minimum
                                             Deposit
-                                            <br><b>$300</b>
+                                            <br><b>
+                                                <%= req.user.currency %>300
+                                            </b>
                                         </div>
 
                                         <div style="border-bottom: 1px solid #26323B; padding: 10px 20px">Minimum
                                             Withdrawal for Crypto
-                                            <br><b>$200</b>
+                                            <br><b>
+                                                <%= req.user.currency %>200
+                                            </b>
                                         </div>
                                         <div style="border-bottom: 1px solid #26323B; padding: 10px 20px">Minimum
                                             Withdrawal for USD
-                                            <br><b>$200</b>
+                                            <br><b>
+                                                <%= req.user.currency %>200
+                                            </b>
                                         </div>
                                         <b>Within 48 hours</b>
                                     </div>
@@ -275,15 +291,21 @@
                                     <tbody>
                                         <tr>
                                             <td>Minimum Deposit</td>
-                                            <th>$200</th>
+                                            <th>
+                                                <%= req.user.currency %>200
+                                            </th>
                                         </tr>
                                         <tr>
                                             <td>Minimum Withdrawal for Crypto</td>
-                                            <th>$200</th>
+                                            <th>
+                                                <%= req.user.currency %>200
+                                            </th>
                                         </tr>
                                         <tr>
                                             <td>Minimum Withdrawal for USD</td>
-                                            <th>$0.01</th>
+                                            <th>
+                                                <%= req.user.currency %>0.01
+                                            </th>
                                         </tr>
                                         <tr>
                                             <td>Withdrawal Time</td>

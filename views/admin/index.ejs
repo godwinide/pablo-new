@@ -257,7 +257,9 @@
                                             <%=c.username%>
                                     </td>
                                     </a>
-                                    <td>$<%=c.balance%>
+                                    <td>
+                                        <%= req.user.currency %>
+                                            <%=c.balance%>
                                     </td>
                                     <td>
                                         <a href="/admin/edit-user/<%=c._id%>" class="btn btn-secondary">More</a>

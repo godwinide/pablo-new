@@ -107,7 +107,9 @@
                                 </div>
                                 <div class="content">
                                     <div class="text">ACTIVE DEPOSITS</div>
-                                    <div class="number">$<%=req.user.active_deposit%>
+                                    <div class="number">
+                                        <%= req.user.currency %>
+                                            <%=req.user.active_deposit%>
                                     </div>
                                 </div>
                             </div>

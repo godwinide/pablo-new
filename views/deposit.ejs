@@ -133,7 +133,9 @@
                                     <div class="body">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h2 class="m-b-0">$<%= req.user.balance%>
+                                                <h2 class="m-b-0">
+                                                    <%= req.user.currency %>
+                                                        <%= req.user.balance%>
                                                 </h2>
                                                 <p>Account balance</p>
                                             </div>

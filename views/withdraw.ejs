@@ -310,11 +310,11 @@
                                 <tbody>
                                     <tr>
                                         <td>Min withdrawal - Crypto</td>
-                                        <th>$200</th>
+                                        <th><%= req.user.currency %>200</th>
                                     </tr>
                                     <tr>
                                         <td>Min withdrawal - USD</td>
-                                        <th>$200.01</th>
+                                        <th><%= req.user.currency %>200.01</th>
                                     </tr>
                                     <tr class="hide-xs">
                                         <td>Withdrawal time</td>
@@ -335,7 +335,7 @@
                     <div class="body">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 class="m-b-0">$<%= req.user.balance%>
+                                <h2 class="m-b-0"><%= req.user.currency %><%= req.user.balance%>
                                 </h2>
                                 <p>Account balance</p>
                             </div>
@@ -358,7 +358,7 @@
                                         </td>
                                         <td>Bitcoin</td>
 
-                                        <td class="text-left"><span>$<%=req.user.balance%></span>
+                                        <td class="text-left"><span><%= req.user.currency %><%=req.user.balance%></span>
 
                                         </td>
                                         <td><a href="EditAccount?a=edit_account"><i>
