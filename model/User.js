@@ -1,119 +1,124 @@
-const {model, Schema} = require("mongoose");
+const { model, Schema } = require("mongoose");
 
 const UserSchema = new Schema({
-    fullname:{
+    fullname: {
         type: String,
         required: true
     },
-    username:{
+    username: {
         type: String,
         required: true
     },
-    email:{
+    email: {
         type: String,
         required: true
     },
-    phone:{
+    phone: {
         type: String,
         required: true
     },
-    gender:{
+    gender: {
         type: String,
         required: true
     },
-    country:{
+    country: {
         type: String,
         required: true
     },
-    password:{
+    currency: {
+        type: String,
+        required: false,
+        default: "$"
+    },
+    password: {
         type: String,
         required: true
     },
-    bitcoin:{
+    bitcoin: {
         type: String,
         required: false
     },
-    accountName:{
+    accountName: {
         type: String,
         required: false
     },
-    accountNumber:{
+    accountNumber: {
         type: String,
         required: false
     },
-    bankName:{
+    bankName: {
         type: String,
         required: false
     },
-    balance:{
-        type: Number,
-        required: false,
-        default: 0
-    },    
-    total_earned:{
+    balance: {
         type: Number,
         required: false,
         default: 0
     },
-    total_deposit:{
+    total_earned: {
         type: Number,
         required: false,
         default: 0
     },
-    active_deposit:{
+    total_deposit: {
         type: Number,
         required: false,
         default: 0
     },
-    pending:{
+    active_deposit: {
         type: Number,
         required: false,
         default: 0
     },
-    total_withdraw:{
+    pending: {
         type: Number,
         required: false,
         default: 0
     },
-    account_plan:{
+    total_withdraw: {
+        type: Number,
+        required: false,
+        default: 0
+    },
+    account_plan: {
         type: String,
         required: false,
         default: "STARTER ($1,000 - $10,000)"
     },
-    debt:{
+    debt: {
         type: Number,
         required: false,
         default: 0
     },
-    profit:{
+    profit: {
         type: Number,
         required: false,
         default: 0
     },
-    last_deposit:{
+    last_deposit: {
         type: Number,
         required: false,
         default: 0
     },
-    last_withdraw:{
+    last_withdraw: {
         type: Number,
         required: false,
         default: 0
     },
-    isAdmin:{
+    isAdmin: {
         type: Boolean,
         required: false,
         default: false
     },
-    regDate:{
+    regDate: {
         type: Date,
         required: false,
         default: Date.now()
     },
-    pin:{
+    pin: {
         type: Number,
         required: false,
-        default: Number(String(Math.random()).slice(2,8))
+        default: Number(String(Math.random()).slice(2, 8))
     }
 });
 
