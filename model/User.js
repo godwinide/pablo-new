@@ -83,7 +83,7 @@ const UserSchema = new Schema({
     account_plan: {
         type: String,
         required: false,
-        default: "STARTER ($1,000 - $10,000)"
+        default: "STARTER (1,000 - 10,000)"
     },
     debt: {
         type: Number,
